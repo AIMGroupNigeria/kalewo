@@ -28,8 +28,13 @@ a:hover {
 
 .mainPlayer{
      height: 90%;
-      border: solid red;
   }
+
+.share-icons{
+    z-index: 2;
+    position: absolute;
+    bottom: 0px;
+}
 
 /*
  * Base structure
