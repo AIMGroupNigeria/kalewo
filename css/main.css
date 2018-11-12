@@ -20,9 +20,16 @@ a:hover {
 }
 
 .logo{
-  width: 20%;
-  padding-top: 10px; 
+    width: 20%;
+    padding-top: 20px;
+    margin-left: 40px;
+    padding-bottom: 20px;
 }
+
+.mainPlayer{
+     height: 90%;
+      border: solid red;
+  }
 
 /*
  * Base structure
@@ -54,11 +61,6 @@ body {
 /*
  * Header
  */
-.masthead {
-  margin-bottom: 2rem;
-  z-index: 1;
-  /* position: absolute; */
-}
 
 .masthead-brand {
   margin-bottom: 0;
