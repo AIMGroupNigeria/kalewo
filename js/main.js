@@ -1,4 +1,4 @@
-let stream = (playerID, divId)=>{
+function stream(playerID, divId){
                 var player = dacast(playerID,divId,{
                    
                 });
@@ -6,10 +6,10 @@ let stream = (playerID, divId)=>{
                 return player;
             }
 
-let delay = ( () => {
+function delay( function() => {
     var timer = 0;
     return function(callback, ms) {
         clearTimeout (timer);
         timer = setTimeout(callback, ms);
     };
-})();
+}();
