@@ -89,22 +89,23 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <script src="js/main.js"></script>
+
         <script>
           
             $( document ).ready(()=>{
                
                 let promotionID = "114063_c_478787"
 
-                stream(promotionID,'promotionPlayer');
+                let p = stream(promotionID,'promotionPlayer');
+
+                delay(function(){
+                   p.play()
+                }, 10000 ); 
 
              
             });
 
-            let stream = (playerID, divId)=>{
-                var player = dacast(playerID,divId,{
-                   
-                });
-            }
             
 
 
