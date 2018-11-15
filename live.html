@@ -96,9 +96,11 @@
                 // for live event
                 let liveEventID = "114063_c_485934";
 
-                stream(liveEventID,'livePlayer');
+               let p = stream(liveEventID,'livePlayer');
 
-
+                 delay(function(){
+                   p.play()
+                }, 10000 ); 
 
             });
 
