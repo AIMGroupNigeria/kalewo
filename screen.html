@@ -57,29 +57,27 @@
           
             </div>
 
-        
-        <style type="text/css">
-        
-        </style>
+        <div id="promotionPlayer" class="mainPlayer"></div>
 
-        <div id="fillPlayer" class="mainPlayer"></div>
+        <div id="livePlayer" class="mainPlayer"></div>
       
          <div class="share-icons col-sm">
-            <!-- AddToAny BEGIN -->
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://kalewo.ng" data-a2a-title="Kalewo Live">
-            <!-- <a class="a2a_dd" href="https://www.addtoany.com/share"></a> -->
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_twitter"></a>
-            </div>
-            <script>
-            var a2a_config = a2a_config || {};
-            a2a_config.onclick = 1;
-            </script>
-            <script async src="https://static.addtoany.com/menu/page.js"></script>
-            <!-- AddToAny END -->
+           <button type="button" onclick="switchPlayer()" class="btn-sm btn live-event-button">Click here to Watch Live Event</button>
+        </div>
+
+        <div class="col-sm advert">
+
+            <div>advert here</div>
+            
+        </div>
+        <div class="col-sm fb-commenting">
+
+            <div>Facebook</div>
+            
         </div>
 
         </div>
+
        
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
@@ -95,15 +93,47 @@
         <script>
           
             $( document ).ready(()=>{
+                $('#livePlayer').hide();
+                // for live event
+                let promotionID = "114063_c_485934"
 
-                const CONTENT_ID = "114063_c_478836"
+                //get id of promotions -- done
+                //create switch biutton and functions
+                //replace the player when the button is clicked
 
-                var myPlayer = dacast(CONTENT_ID, 'fillPlayer', { 
-                 
+                stream(promotionID,'promotionPlayer');
+
+                //  var player = dacast(promotionID,'promotionPlayer',{
+                //     width:200, height: 200
+                // });
+            });
+
+            let stream = (playerID, divId)=>{
+                var player = dacast(playerID,divId,{
+                   
                 });
-                
+            }
 
-            })
+            let switchPlayer = ()=>{
+                console.log('poont 1');
+                $('#promotionPlayer').slideDown();
+                console.log('poont 2');
+
+                $('#livePlayer').slideUp();
+                console.log('poont 3');
+
+                let liveEventID = "114063_c_478836";
+
+                console.log('poont 4');
+
+                stream(liveEventID,'livePlayer');
+                //    var player = dacast(liveEventID,'livePlayer',{
+                //     width:500, height: 200
+                // });
+                console.log('poont 5');
+
+
+            }
             
 
 

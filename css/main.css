@@ -6,7 +6,7 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #fff; 
 }
 
 /* Custom default button */
@@ -33,7 +33,42 @@ a:hover {
 .share-icons{
     z-index: 2;
     position: absolute;
-    bottom: 0px;
+    bottom: 0%;
+    text-align: center;
+}
+
+.live-event-button{
+  padding: 12px;
+  background-color: orange;
+}
+
+.live-event-button:hover{
+  background-color: grey;
+}
+
+.advert{
+  z-index: 2;
+  position: absolute;
+  bottom: -10%;
+  /* left: 50%; */
+  width: 100%;
+  padding: 10px;
+  margin: 16px;
+  background: grey;
+  text-align: center;
+  
+}
+
+.fb-commenting{
+  z-index: 2;
+  position: absolute;
+  bottom: -20%;
+  /* left: 50%; */
+  width: 100%;
+  padding: 10px;
+  margin: 16px;
+  background: aliceblue;
+  text-align: center;
 }
 
 /*
