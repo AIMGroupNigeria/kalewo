@@ -57,12 +57,11 @@
           
             </div>
 
-        <div id="promotionPlayer" class="mainPlayer"></div>
-
+        <div id="livePlayer" class="mainPlayer"></div>
       
-         <div class="share-icons col-sm">
-           <a href="live.html"  class="btn-sm btn live-event-button">Click here to Watch Live Event</a>
-        </div>
+        <!--  <div class="share-icons col-sm">
+           <button type="button" onclick="switchPlayer()" class="btn-sm btn live-event-button">Click here to Watch Live Event</button>
+        </div> -->
 
         <div class="col-sm advert">
 
@@ -92,12 +91,12 @@
         <script>
           
             $( document ).ready(()=>{
-               
-                let promotionID = "114063_c_478787"
+                
+                // for live event
+                let liveEventID = "114063_c_485934";
 
-                stream(promotionID,'promotionPlayer');
+                stream(liveEventID,'livePlayer');
 
-             
             });
 
             let stream = (playerID, divId)=>{
@@ -105,7 +104,8 @@
                    
                 });
             }
-            
+
+           
 
 
 
