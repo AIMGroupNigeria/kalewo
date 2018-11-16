@@ -63,12 +63,12 @@
            <button type="button" onclick="switchPlayer()" class="btn-sm btn live-event-button">Click here to Watch Live Event</button>
         </div> -->
 
-        <div class="col-sm advert">
+        <div class="col-sm advert-live">
 
-            <div>advert here</div>
+            <div><img src="https://i0.wp.com/wazobiatv.tv/wp-content/uploads/2018/07/pbcoollink-300x65.png" /></div>
             
         </div>
-        <div class="col-sm fb-commenting">
+        <div class="col-sm fb-commenting-live">
 
             <div>Facebook</div>
             
@@ -89,40 +89,18 @@
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
          <script src="js/main.js"></script>
+
         <script>
           
             $( document ).ready(()=>{
                 
                 // for live event
-                let liveEventID = "114063_c_485934";
+                let liveEventID = "114063_c_478836";
 
-               let p = stream(liveEventID,'livePlayer');
+              stream(liveEventID,'livePlayer');
 
-                 delay(function(){
-                   p.play()
-                }, 10000 ); 
-
+               
             });
-
-            function stream(playerID, divId){
-                var player = dacast(playerID,divId,{
-                   
-                });
-
-                return player;
-            }
-
-function delay( function() => {
-    var timer = 0;
-    return function(callback, ms) {
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-}();
-
-           
-
-
 
         </script>
     </body>

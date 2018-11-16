@@ -28,9 +28,11 @@ a:hover {
 
 .mainPlayer{
      height: 90%;
+     border: solid red;
+
   }
 
-.share-icons{
+.live-button-holder{
     z-index: 2;
     position: absolute;
     bottom: 0%;
@@ -46,27 +48,41 @@ a:hover {
   background-color: grey;
 }
 
-.advert{
+.advert-home{
   z-index: 2;
   position: absolute;
   bottom: -10%;
-  /* left: 50%; */
   width: 100%;
-  padding: 10px;
-  margin: 16px;
   background: grey;
   text-align: center;
-  
+  margin-left: 20px;
 }
 
-.fb-commenting{
+.advert-live{
   z-index: 2;
   position: absolute;
-  bottom: -20%;
-  /* left: 50%; */
+  bottom: -0%;
   width: 100%;
-  padding: 10px;
-  margin: 16px;
+  background: grey;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.fb-commenting-home{
+  z-index: 2;
+  position: absolute;
+  bottom: -13%;
+  width: 100%;
+  margin-left: 20px;
+  background: aliceblue;
+  text-align: center;
+}
+.fb-commenting-live{
+  z-index: 2;
+  position: absolute;
+  bottom: -13%;
+  width: 100%;
+  margin-left: 20px;
   background: aliceblue;
   text-align: center;
 }

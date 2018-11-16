@@ -32,52 +32,22 @@
         <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <script src="//player.dacast.com/js/player.js"></script>
-        <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"549d09cbc6e59a74c7bf0f858","lid":"f233a4ecd0","uniqueMethods":true}) })</script>
     </head>
     <body>
-
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
        
-        <div class="row">
-            <div class="col-sm ">
-           
-           
-              <img src="img/logo.png" class="logo" />
-        
-              <nav class="nav nav-masthead justify-content-center">
-                <!-- <a class="nav-link active" href="#">Home</a> -->
-                <!-- <a class="nav-link" href="#">Sign Up</a> -->
-                <!-- <a class="nav-link" href="#">Contact</a> -->
-              </nav>
-          
+            <div class="col-12 align-middle center">
+               
+                <img src="img/logo.png" class="logo" />
+            
+                <p>New Platform coming soon, watch this space!</p>
+             
             </div>
-
-        <div id="promotionPlayer" class="mainPlayer"></div>
-
-      
-         <div class="share-icons col-sm">
-           <a href="live.html"  class="btn-sm btn live-event-button">Click here to Watch Live Event</a>
-        </div>
-
-        <div class="col-sm advert">
-
-            <div>advert here</div>
-            
-        </div>
-        <div class="col-sm fb-commenting">
-
-            <div>Facebook</div>
-            
-        </div>
-
-        </div>
-
-       
+    
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
@@ -89,41 +59,5 @@
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <script src="js/main.js"></script>
-
-        <script>
-          
-            $( document ).ready(()=>{
-               
-                let promotionID = "114063_c_478787"
-
-                let p = stream(promotionID,'promotionPlayer');
-
-                delay(function(){
-                   p.play()
-                }, 10000 ); 
-
-             
-            });
-
-            function stream(playerID, divId){
-                var player = dacast(playerID,divId,{
-                   
-                });
-
-                return player;
-            }
-
-function delay( function() => {
-    var timer = 0;
-    return function(callback, ms) {
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-}();
-
-
-
-        </script>
     </body>
 </html>
