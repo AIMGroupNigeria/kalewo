@@ -69,8 +69,8 @@
             
         </div>
         <div class="col-sm fb-commenting-live">
-
-            <div>Facebook</div>
+            <div class="fb-comments" data-href="https://www.facebook.com/kalewolive"data-numposts="10" data-colorscheme="dark" data-order-by="reverse_time"></div>
+            
             
         </div>
 
@@ -81,6 +81,16 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        
+        <div id="fb-root"></div>
+
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>

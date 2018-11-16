@@ -77,13 +77,16 @@ a:hover {
   background: aliceblue;
   text-align: center;
 }
+._42ef ._8u{
+  display: none !important;
+}
 .fb-commenting-live{
   z-index: 2;
   position: absolute;
-  bottom: -13%;
+  bottom: -49%;
   width: 100%;
   margin-left: 20px;
-  background: aliceblue;
+  background: black;
   text-align: center;
 }
 
