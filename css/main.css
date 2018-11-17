@@ -37,6 +37,7 @@ a:hover {
     position: absolute;
     bottom: 0%;
     text-align: center;
+    right: 0%;
 }
 
 .live-event-button{
@@ -56,6 +57,7 @@ a:hover {
   background: grey;
   text-align: center;
   margin-left: 20px;
+  right: 0%;
 }
 
 .advert-live{
