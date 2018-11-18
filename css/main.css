@@ -29,14 +29,22 @@ a:hover {
 
 .mainPlayer-live{
 
-     height: 100%;
-     border: solid black;
+     height: 80%;
+    border: solid red;
+    width: 80%;
+    width: 95%;
+    position: absolute;
+    bottom: 10%;
+    left: 4%;
+    right: 4%;
+    margin: auto;
+    top: 10%;
 
   }
 
 .mainPlayer-home{
 
-    border: solid red;
+    border: solid black;
     margin: auto;
     position: absolute;
     bottom: 10%;
@@ -80,7 +88,7 @@ a:hover {
 .advert-live{
   z-index: 2;
   position: absolute;
-  bottom: -10%;
+  bottom: -0%;
   width: 100%;
   background: black;
   text-align: center;
