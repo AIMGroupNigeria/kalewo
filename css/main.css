@@ -19,6 +19,7 @@ a:hover {
   border: .05rem solid #fff;
 }
 
+
 .logo{
     width: 20%;
     padding-top: 20px;
@@ -26,11 +27,26 @@ a:hover {
     padding-bottom: 20px;
 }
 
-.mainPlayer{
+.mainPlayer-live{
+
      height: 100%;
      border: solid black;
 
   }
+
+.mainPlayer-home{
+
+    border: solid red;
+    margin: auto;
+    position: absolute;
+    bottom: 10%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    width: 960px;
+    height: 540px;
+}
 
 .live-button-holder{
     z-index: 2;
@@ -101,7 +117,7 @@ body {
 body {
   display: -ms-flexbox;
   display: -webkit-box;
-  display: flex; 
+  display: block; 
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
@@ -151,6 +167,12 @@ body {
   }
   .nav-masthead {
     float: right;
+  }
+  .mainPlayer-home{
+
+      bottom: 6%;
+      left: 8%;
+
   }
 }
 
