@@ -36,7 +36,7 @@ a:hover {
 
 .mainPlayer-home{
 
-    border: solid black;
+    border: solid red;
     margin: auto;
     position: absolute;
     bottom: 10%;
@@ -44,8 +44,8 @@ a:hover {
     left: 10%;
     right: 10%;
     text-align: center;
-    width: 960px;
-    height: 540px;
+    width: 80%;
+    height: 80%;
 }
 
 .live-button-holder{

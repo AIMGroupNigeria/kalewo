@@ -92,12 +92,12 @@
         <script src="js/main.js"></script>
 
         <script>
-
+            
             function stream(playerID, divId){
 
-                dacast(playerID,divId,{
-                    width: "960",
-                    height: "540"
+               return dacast(playerID,divId,{
+                    width: "80%",
+                    height: "80%"
                    
                 });
 
@@ -108,11 +108,14 @@
                
                 let promotionID = "114063_l_485985"
 
-                stream(promotionID,'promotionPlayer');
-               
+                 let player = stream(promotionID,'promotionPlayer');
+                  
+                  if(player.ready()){
+                    player.play();
+                  }
             });
 
-
+            
 
         </script>
     </body>
