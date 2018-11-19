@@ -79,7 +79,7 @@ a:hover {
   position: absolute;
   bottom: -10%;
   width: 100%;
-  background: grey;
+  background: white;
   text-align: center;
   margin-left: 20px;
   right: 0%;
@@ -90,7 +90,7 @@ a:hover {
   position: absolute;
   bottom: -0%;
   width: 100%;
-  background: black;
+  background: white;
   text-align: center;
   margin-left: 20px;
 }
