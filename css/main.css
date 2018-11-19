@@ -112,6 +112,43 @@ a:hover {
   text-align: center;
 }
 
+.fb-categories-home{
+  z-index: 2;
+  position: absolute;
+  bottom: -35%;
+  width: 98%;
+  margin-left: 20px;
+  height: 26%;
+  display: inline
+}
+
+.category-title{
+  font-weight: 400;
+  padding-left: 4%;
+  padding-top: 2%;
+}
+
+.table-row{
+  padding-top: 2%;
+  text-align: left;
+  white-space: nowrap;
+
+}
+
+.table-row div{
+  width: 24%;
+  display: inline-block;
+  transition: transform .2s;
+  background-color: white
+}
+.table-row div:hover{
+  transform: scale(1.5);
+  cursor: pointer;
+}
+.table-row div img{
+  width: 100%
+}
+
 /*
  * Base structure
  */

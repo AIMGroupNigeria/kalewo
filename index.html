@@ -73,11 +73,24 @@
             <div><img src="https://i0.wp.com/wazobiatv.tv/wp-content/uploads/2018/07/pbcoollink-300x65.png" /></div>
             
         </div>
-        <!-- <div class="col-sm fb-commenting-home">
-
-            <div>Facebook</div>
-            
-        </div> -->
+        <div class="col-sm fb-categories-home">
+            <div class="category-title">Live TV Streaming</div>
+            <div class="table-row live-tv">
+                <div><img src="https://images.dacast.com/114063/tc-478755-5.png?1542628122"  /></div>
+                <div><img src="https://images.dacast.com/114063/sc-477044-5.png?1542628122""  /></div>
+                <div><img src="https://images.dacast.com/114063/tc-477043-5.png?1542628122"  /></div>
+                <div><img src="https://images.dacast.com/114063/tc-476914-5.png?1542628122"  /></div>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="col-sm fb-categories-home"> -->
+            <div class="category-title">Visual Radio</div>
+            <div class="table-row visual-radio">
+                <div><img src="https://images.dacast.com/114063/tc-478774-5.png?1542628122"  /></div>
+                <div><img src="https://images.dacast.com/114063/tc-478770-5.png?1542628122"  /></div>
+                <div><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+               
+            </div>
+        </div>
 
         </div>
 
@@ -121,6 +134,29 @@
                   
                   // console.log(player.ready());
                   // console.log(player.playing());
+
+                  // Get live channels here
+
+                  var jqxhr = $.get( "http://api.dacast.com/v2/channel?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
+                        // let data = data.data;
+                        
+                        // for(let i = 0; i <= data.length; i++){
+
+                        //     if(data.)
+
+                        // }
+                      console.log(data.data);
+                    })
+                      .done(function() {
+                        alert( "second success" );
+                      })
+                      .fail(function() {
+                        alert( "error" );
+                      })
+                      .always(function() {
+                        alert( "finished" );
+                      });
+                     
 
             });
 
