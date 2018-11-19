@@ -57,8 +57,8 @@
           
             </div>
 
-        <!-- <div id="promotionPlayer" class="mainPlayer-home"></div> -->
-<script id="114063_l_485985" width="960" height="540" src="//player.dacast.com/js/player.js"  class="dacast-video"></script>
+        <div id="promotionPlayer" class="mainPlayer-home"></div>
+
       
          <div class="live-button-holder col-sm">
            <a href="live.html"  class="btn-sm btn live-event-button">Subscribe to watch Miss Nigeria 2018</a>
@@ -91,5 +91,32 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         <script src="js/main.js"></script>
 
+        <script>
+            
+            function stream(playerID, divId){
+
+               return dacast(playerID,divId,{
+                    width: "80%",
+                    height: "80%"
+                   
+                });
+
+               
+            }
+          
+            $( document ).ready(()=>{
+               
+                let promotionID = "114063_l_485985"
+
+                 let player = stream(promotionID,'promotionPlayer');
+                  
+                  if(player.ready()){
+                    player.play();
+                  }
+            });
+
+            
+
+        </script>
     </body>
 </html>
