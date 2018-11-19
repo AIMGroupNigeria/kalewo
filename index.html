@@ -57,7 +57,11 @@
           
             </div>
 
-        <div id="promotionPlayer" class="mainPlayer-home"></div>
+        <div id="promotionPlayer" class="mainPlayer-home">
+            
+            <iframe src="//iframe.dacast.com/b/114063/l/485985" width="100%" height="100%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+        </div>
 
       
          <div class="live-button-holder col-sm">
@@ -92,28 +96,49 @@
         <script src="js/main.js"></script>
 
         <script>
-            
-            function stream(playerID, divId){
+           
+           let player = (playerID, divId)=>{
 
                return dacast(playerID,divId,{
-                    width: "80%",
-                    height: "80%"
-                   
-                });
+                    "allow":"autoplay",
+                "social": { 
+                    "facebook": false, 
+                    "twitter": false, 
+                    "embed": false 
+                    } 
+
+               });
 
                
             }
+
           
             $( document ).ready(()=>{
-               
-                let promotionID = "114063_l_485985"
+               // console.log('ready');
+                // let promotionID = "114063_l_485985"
 
-                 let player = stream(promotionID,'promotionPlayer');
+                //  player(promotionID,'promotionPlayer');
                   
-                  if(player.ready()){
-                    player.play();
-                  }
+                  // console.log(player.ready());
+                  // console.log(player.playing());
+
             });
+
+            // setTime(startPlayer(player),500);
+
+            setTimeout(function(args) {
+                startPlayer(player)
+            }, 500)
+
+            function startPlayer(player){
+               console.log('state 1');
+
+               //  if(player.ready()){
+               // console.log('state 2');
+                   
+               //      player.play();
+               //    }
+            }
 
             
 
