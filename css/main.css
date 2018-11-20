@@ -19,26 +19,32 @@ a:hover {
   border: .05rem solid #fff;
 }
 
+.logo-img{
+    width: 30%;
+    /* padding-bottom: 20px; */
+    position: absolute;
+    top: -10%;
+}
 
 .logo{
-    width: 20%;
-    padding-top: 20px;
-    margin-left: 40px;
-    padding-bottom: 20px;
+       height: 40%;
+    border: solid;
+    /* display: inline; */
+    top: 0px;
 }
 
 .mainPlayer-live{
 
-     height: 80%;
+    height: 80%;
     border: solid black;
-    width: 80%;
+   
     width: 95%;
     position: absolute;
     bottom: 10%;
     left: 4%;
     right: 4%;
     margin: auto;
-    top: 10%;
+    top: 20%;
 
   }
 
@@ -52,8 +58,9 @@ a:hover {
     left: 10%;
     right: 10%;
     text-align: center;
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
+    /* border: solid white; */
 }
 
 .live-button-holder{
@@ -67,7 +74,7 @@ a:hover {
 
 .live-event-button{
   padding: 12px;
-  background-color: orange;
+  background-color: #FF712B;
 }
 
 .live-event-button:hover{

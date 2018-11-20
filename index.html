@@ -43,19 +43,20 @@
 
         <!-- Add your site or application content here -->
        
-        <div class="row">
-            <div class="col-sm ">
+        <!-- <div class="row"> -->
+             <!-- <div class="logo"> -->
+              <img src="img/kalewo02.png" class="logo-img"  />
+            <!-- </div> -->
+            <!-- <div class="col-sm "> -->
            
            
-              <img src="img/logo.png" class="logo" />
-        
-              <nav class="nav nav-masthead justify-content-center">
+              <!-- <nav class="nav nav-masthead justify-content-center"> -->
                 <!-- <a class="nav-link active" href="#">Home</a> -->
                 <!-- <a class="nav-link" href="#">Sign Up</a> -->
                 <!-- <a class="nav-link" href="#">Contact</a> -->
-              </nav>
+              <!-- </nav> -->
           
-            </div>
+            <!-- </div> -->
 
         <div id="promotionPlayer" class="mainPlayer-home">
             
@@ -135,7 +136,22 @@
                 $('#promotionPlayer').html('loading...');
                 var jqxhr = $.get( "http://api.dacast.com/v2/channel/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
                      
+                        let theDiv = '#' + channel_id;
+                        
+                        // $(theDiv).removeAttr( 'width' );
+                        // $(theDiv).removeAttr( 'height' );
+
                       $('#promotionPlayer').html(data.code);
+
+                        $(theDiv).attr("width", "100%"); 
+                        $(theDiv).attr("height", "100%"); 
+                        $(theDiv).attr("scrolling", "no"); 
+                        $(theDiv).attr("allowfullscreen"); 
+                        $(theDiv).attr("webkitallowfullscreen"); 
+                        $(theDiv).attr("mozallowfullscreen"); 
+                        $(theDiv).attr("oallowfullscreen"); 
+                        $(theDiv).attr("msallowfullscreen"); 
+
                       // $("html, body").animate({ scrollTop: 0 }, "slow");
                     })
                       .done(function() {
