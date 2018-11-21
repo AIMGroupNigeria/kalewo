@@ -58,35 +58,27 @@
           
             <!-- </div> -->
 
-        <div id="livePlayer" class="mainPlayer-home">
-            <iframe src="//iframe.dacast.com/b/114063/c/478836" width="100%" height="100%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-        </div>
       
-        <!--  <div class="share-icons col-sm">
-           <button type="button" onclick="switchPlayer()" class="btn-sm btn live-event-button">Click here to Watch Live Event</button>
-        </div> -->
-
-        <div class="col-sm advert-live">
-
-            <div><img src="https://i0.wp.com/wazobiatv.tv/wp-content/uploads/2018/07/pbcoollink-300x65.png" /></div>
-             <div onclick="dropComment()" class="comment-icon-cover">
-            <img  src="https://www.androidpolice.com/wp-content/uploads/2013/04/nexusae0_fbmessenger2.png" title="join the conversation" />
-        </div>  
         </div>
-        
+                
+                 <div class="table-row playlist-item-slick" style="border: solid; width: 100%; position:absolute; top:30%" id="playlist-item">
+                     
+                    <div onclick="loadPlayer('478774')" style="background: black"><img src="https://images.dacast.com/114063/tc-478774-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478770')"><img src="https://images.dacast.com/114063/tc-478770-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478757')"><img src="https://images.dacast.com/114063/tc-478757-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478770')"><img src="https://images.dacast.com/114063/tc-478770-5.png?1542628122"  /></div>
+                    <div onclick="loadPlayer('478770')"><img src="https://images.dacast.com/114063/tc-478770-5.png?1542628122"  /></div>
 
-        <div class="col-sm fb-commenting-live" id="fb-comment" style="display: none;">
-
-            <div class="fb-comments" data-href="https://www.facebook.com/kalewolive"data-numposts="10" data-colorscheme="dark" data-order-by="reverse_time"></div>
-            
-            
-        </div>
-            <div class="col-sm fb-categories-home">
-                 <div class="category-title" id="playlist-title"></div>
-                <!--  <div id="left" class="scroll-left" onclick="goBackward()"> <<< </div> -->
-                 <div class="table-row playlist-item-slick" id="playlist-item"></div>
-                 <!-- <div id="right" class="scroll-right" onclick="goForward()"> >>> </div> -->
-            </div>
+                   
+                 </div>
+              
         </div>
 
        
@@ -118,77 +110,20 @@
   <script type="text/javascript" src="slick/slick.min.js"></script>
 
         <script>
-            
-            let shown = [];
-
-            function stream(playerID, divId){
-
-                dacast(playerID,divId,{
-                   
-                });
-
-               
-            }
-            function dropComment(){
-                $("html, body").animate({ scrollTop: $(document).height() }, 1000);
-                // $("html, body").animate({ scrollBottom: 0 }, "slow");
-                console.log('clicked');
-                $('#fb-comment').slideToggle();
-            }
-          
-            function goForward(){
-                let showing = [1,2,3,4];       
-                let children = $("#playlist-item").children();
-                console.log('tesint --- >');
-                let id = '#'+children[0].id;
-                console.log(id);
-                    $(id).slideToggle();
-            }   
-
-            function goBackward(){
-
-            }
+           
 
             $( document ).ready(()=>{
                 
-                // for live event
-                let liveEventID = "114063_c_478836";
-
-              stream(liveEventID,'livePlayer');
-
-               var jqxhr = $.get( "http://api.dacast.com/v2/playlist/485985?apikey=114063_6eeb720e928988b24d3d&sort=ASC", function(data) {
-                         
-                        // console.log(data);
-                        $('#playlist-title').html(data.title);
-
-                        for(let i = 0; i < data.content.list.length ; i++){
-
-                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadPlayer("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tc-478774-5.png?1542628122'  /></div>");
-
-                        }
-
-                    })
-                      .done(function() {
-
-
-                      })
-                      .fail(function(err) {
-                        console.log(err);
-                      })
-                      .always(function() {
-                        console.log("shown --->");
-                        console.log(shown);
-                      });
-
-                       $('.playlist-item-slick').slick({
+             
+                $('.playlist-item-slick').slick({
                           dots: true,
                           infinite: false,
                           speed: 300,
                           arrows:true,
-                          prevArrow:'<button type="button" class="slick-prev btn-primary"></button>',
+                          prevArrow:'<button type="button" class="slick-prev"></button>',
                           nextArrow:'<button type="button" class="slick-next"></button>',
-                          slidesToShow: 6,
-                          slidesToScroll: 4,
+                          slidesToShow: 10,
+                          slidesToScroll: 1,
                           responsive: [
                             {
                               breakpoint: 1024,
@@ -215,8 +150,6 @@
                             }
                           ]
                       });
-
-               
             });
 
         </script>

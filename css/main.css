@@ -27,7 +27,7 @@ a:hover {
 }
 
 .logo{
-       height: 40%;
+    height: 40%;
     border: solid;
     /* display: inline; */
     top: 0px;
@@ -37,7 +37,6 @@ a:hover {
 
     height: 80%;
     border: solid black;
-   
     width: 95%;
     position: absolute;
     bottom: 10%;
@@ -49,7 +48,6 @@ a:hover {
   }
 
 .mainPlayer-home{
-
     border: solid;
     margin: auto;
     position: absolute;
@@ -60,20 +58,23 @@ a:hover {
     text-align: center;
     width: 70%;
     height: 70%;
-    /* border: solid white; */
+    overflow: hidden;
 }
 
 .scroll-left{
-  height: 100%;
-  border: solid;
-  text-align: left;
-  width: 5%;
-  position: absolute;
-  top: 40%;
-  padding: 0px;
-  vertical-align: middle;
-  height: 151px;
-
+    height: 100%;
+    border: solid;
+    text-align: left;
+    width: 5%;
+    position: absolute;
+    top: 45%;
+    padding: 0px;
+    vertical-align: middle;
+    height: 151px;
+    background: green;
+    cursor: pointer;
+    z-index: 1;
+    left: 0%;
 }
 
 .scroll-right{
@@ -82,11 +83,23 @@ a:hover {
     text-align: right;
     width: 5%;
     position: absolute;
-    right: 0%;
-    top: 40%;
+    right: -5%;
+    top: 45%;
     padding: 0px;
     vertical-align: middle;
     height: 151px;
+    background: orange;
+    cursor: pointer;
+    z-index: 1;
+    right: 3%;
+}
+
+.scroll-right:hover{
+  background: grey;
+}
+
+.scroll-left:hover{
+  background: pink;
 }
 
 .live-button-holder{
@@ -154,7 +167,8 @@ a:hover {
   width: 98%;
   margin-left: 20px;
   height: 26%;
-  display: inline
+  display: inline;
+  border: solid red;
 }
 
 .comment-icon-cover{
@@ -180,14 +194,17 @@ a:hover {
   padding-top: 2%;
   text-align: left;
   white-space: nowrap;
+  overflow: hidden;
+  width: 97%;
+  position: absolute;
+  left: 0%;
 }
 
 .table-row div{
-  width: 24%;
+ 
   height: 160px;
   max-height: 100%;
   max-width: 100%;
-  display: inline-block;
   transition: transform .2s;
   background-color: green;
   overflow: hidden;
