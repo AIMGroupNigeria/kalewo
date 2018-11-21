@@ -43,21 +43,21 @@
 
         <!-- Add your site or application content here -->
        
-        <div class="row">
-            <div class="col-sm ">
+       <!--  <div class="row">
+            <div class="col-sm "> -->
            
            
-              <img src="img/kalewo02.png" class="logo" />
+              <img src="img/kalewo02.png" class="logo-img" />
         
-              <nav class="nav nav-masthead justify-content-center">
+              <!-- <nav class="nav nav-masthead justify-content-center"> -->
                 <!-- <a class="nav-link active" href="#">Home</a> -->
                 <!-- <a class="nav-link" href="#">Sign Up</a> -->
                 <!-- <a class="nav-link" href="#">Contact</a> -->
-              </nav>
+              <!-- </nav> -->
           
-            </div>
+            <!-- </div> -->
 
-        <div id="livePlayer" class="mainPlayer-live">
+        <div id="livePlayer" class="mainPlayer-home">
             <iframe src="//iframe.dacast.com/b/114063/c/478836" width="100%" height="100%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
         </div>
       
@@ -68,14 +68,24 @@
         <div class="col-sm advert-live">
 
             <div><img src="https://i0.wp.com/wazobiatv.tv/wp-content/uploads/2018/07/pbcoollink-300x65.png" /></div>
-            
+             <div onclick="dropComment()" class="comment-icon-cover">
+            <img  src="https://www.androidpolice.com/wp-content/uploads/2013/04/nexusae0_fbmessenger2.png" title="join the conversation" />
+        </div>  
         </div>
-        <div class="col-sm fb-commenting-live">
+        
+
+        <div class="col-sm fb-commenting-live" id="fb-comment" style="display: none;">
+
             <div class="fb-comments" data-href="https://www.facebook.com/kalewolive"data-numposts="10" data-colorscheme="dark" data-order-by="reverse_time"></div>
             
             
         </div>
-
+            <div class="col-sm fb-categories-home">
+                 <div class="category-title" id="playlist-title"></div>
+                 <div id="left" class="scroll-left"> <<< </div>
+                 <div class="table-row" id="playlist-item"></div>
+                 <div id="right" class="scroll-right"> >>> </div>
+            </div>
         </div>
 
        
@@ -112,6 +122,12 @@
 
                
             }
+            function dropComment(){
+                $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+                // $("html, body").animate({ scrollBottom: 0 }, "slow");
+                console.log('clicked');
+                $('#fb-comment').slideToggle();
+            }
           
             $( document ).ready(()=>{
                 
@@ -119,6 +135,30 @@
                 let liveEventID = "114063_c_478836";
 
               stream(liveEventID,'livePlayer');
+// 485985
+// v2/playlist/{playlist_id}
+
+               var jqxhr = $.get( "http://api.dacast.com/v2/playlist/485985?apikey=114063_6eeb720e928988b24d3d&sort=ASC", function(data) {
+                         
+                        console.log(data);
+                        $('#playlist-title').html(data.title);
+
+                        for(let i = 0; i < data.content.list.length ; i++){
+
+                            $('#playlist-item').append("<div onclick='loadPlayer("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tc-478774-5.png?1542628122'  /></div>");
+
+                        }
+
+                    })
+                      .done(function() {
+                        // alert( "second success" );
+                      })
+                      .fail(function() {
+                        // alert( "error" );
+                      })
+                      .always(function() {
+                        // alert( "finished" );
+                      });
 
                
             });
