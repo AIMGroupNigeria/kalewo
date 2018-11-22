@@ -113,14 +113,23 @@ a:hover {
 }
 
 .fb-categories-home{
-  z-index: 2;
+  /* z-index: 2; */
   position: absolute;
-  bottom: -25%;
+  bottom: -35%;
   width: 98%;
   margin-left: 20px;
   height: 26%;
   display: inline;
   /* border: solid red; */
+}
+.fb-categories-live{
+  /* z-index: 2; */
+  position: absolute;
+  bottom: -65%;
+  width: 98%;
+  margin-left: 20px;
+  height: 26%;
+  display: inline
 }
 
 .comment-icon-cover{
@@ -151,16 +160,6 @@ a:hover {
   margin-left: 20px;
   background: black;
   text-align: center;
-}
-
-.fb-categories-home{
-  z-index: 2;
-  position: absolute;
-  bottom: -35%;
-  width: 98%;
-  margin-left: 20px;
-  height: 26%;
-  display: inline
 }
 
 .category-title{
