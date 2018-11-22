@@ -220,6 +220,44 @@
                
             });
 
+             function loadPlayer(channel_id){
+                console.log('here');
+                //remove present player
+                //load new player
+                // play
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('#livePlayer').html('loading...');
+                var jqxhr = $.get( "http://api.dacast.com/v2/playlist/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
+                     
+                        let theDiv = '#' + channel_id;
+                        
+                        // $(theDiv).removeAttr( 'width' );
+                        // $(theDiv).removeAttr( 'height' );
+
+                      $('#livePlayer').html(data.code);
+
+                        $(theDiv).attr("width", "100%"); 
+                        $(theDiv).attr("height", "100%"); 
+                        $(theDiv).attr("scrolling", "no"); 
+                        $(theDiv).attr("allowfullscreen"); 
+                        $(theDiv).attr("webkitallowfullscreen"); 
+                        $(theDiv).attr("mozallowfullscreen"); 
+                        $(theDiv).attr("oallowfullscreen"); 
+                        $(theDiv).attr("msallowfullscreen"); 
+
+                      // $("html, body").animate({ scrollTop: 0 }, "slow");
+                    })
+                      .done(function() {
+                        // alert( "second success" );
+                      })
+                      .fail(function(err) {
+                        console.log(err)
+                      })
+                      .always(function() {
+                        console.log( "finished" );
+                      });
+            }
+
         </script>
     </body>
 </html>
