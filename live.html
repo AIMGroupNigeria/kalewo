@@ -159,17 +159,23 @@
 
                var jqxhr = $.get( "http://api.dacast.com/v2/playlist/485985?apikey=114063_6eeb720e928988b24d3d&sort=ASC", function(data) {
                          
-                        // console.log(data);
+                        console.log(data);
                         $('#playlist-title').html(data.title);
 
                         for(let i = 0; i < data.content.list.length ; i++){
+                          console.log('id--->');
+                          console.log(data.content.list[i].id);
+                        
+                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadPlayer("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tf-"+data.content.list[i].id+"-1.png?1542891095'  /></div>");
 
-                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadPlayer("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tc-478774-5.png?1542628122'  /></div>");
+
+
 
                         }
 
                     })
-                      .done(function() {
+                      .done(function(data) {
+                        
 
 
                       })
@@ -227,7 +233,7 @@
                 // play
                 $("html, body").animate({ scrollTop: 0 }, "slow");
                 $('#livePlayer').html('loading...');
-                var jqxhr = $.get( "http://api.dacast.com/v2/playlist/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
+                var jqxhr = $.get( "http://api.dacast.com/v2/vod/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
                      
                         let theDiv = '#' + channel_id;
                         
