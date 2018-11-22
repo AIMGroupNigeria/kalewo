@@ -99,7 +99,7 @@ a:hover {
   width: 100%;
   background: white;
   text-align: center;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .fb-commenting-live{
@@ -121,7 +121,7 @@ a:hover {
   margin-left: 20px;
   height: 26%;
   display: inline;
-  border: solid red;
+  /* border: solid red; */
 }
 
 .comment-icon-cover{
