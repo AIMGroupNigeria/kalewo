@@ -155,7 +155,7 @@ a:hover {
 .fb-commenting-live{
   z-index: 2;
   position: absolute;
-  bottom: -60%;
+  bottom: -120%;
   width: 100%;
   margin-left: 20px;
   background: black;
