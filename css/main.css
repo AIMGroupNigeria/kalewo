@@ -93,13 +93,13 @@ a:hover {
 }
 
 .advert-live{
-  z-index: 2;
-  position: absolute;
-  bottom: -0%;
-  width: 100%;
-  background: white;
-  text-align: center;
-  /* margin-left: 20px; */
+    z-index: 2;
+    position: absolute;
+       bottom: -3%;
+    width: 100%;
+    background: black;
+    text-align: left;
+    /* margin-left: 20px; */
 }
 
 .fb-commenting-live{
@@ -125,11 +125,23 @@ a:hover {
 .fb-categories-live{
   /* z-index: 2; */
   position: absolute;
-  bottom: -65%;
+  bottom: -40%;
   width: 98%;
   margin-left: 20px;
   height: 26%;
   display: inline
+}
+
+.fb-categories-new{
+z-index: 3;
+    position: absolute;
+    bottom: -11%;
+    width: 100%;
+
+    height: 10%;
+    display: inline;
+    background-color: white;
+    text-align: center;
 }
 
 .comment-icon-cover{
