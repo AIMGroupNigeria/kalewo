@@ -27,7 +27,7 @@ a:hover {
 }
 
 .logo{
-    height: 40%;
+       height: 40%;
     border: solid;
     /* display: inline; */
     top: 0px;
@@ -37,6 +37,7 @@ a:hover {
 
     height: 80%;
     border: solid black;
+   
     width: 95%;
     position: absolute;
     bottom: 10%;
@@ -48,7 +49,8 @@ a:hover {
   }
 
 .mainPlayer-home{
-    border: solid;
+
+    border: solid black;
     margin: auto;
     position: absolute;
     bottom: 10%;
@@ -58,48 +60,7 @@ a:hover {
     text-align: center;
     width: 70%;
     height: 70%;
-    overflow: hidden;
-}
-
-.scroll-left{
-    height: 100%;
-    border: solid;
-    text-align: left;
-    width: 5%;
-    position: absolute;
-    top: 45%;
-    padding: 0px;
-    vertical-align: middle;
-    height: 151px;
-    background: green;
-    cursor: pointer;
-    z-index: 1;
-    left: 0%;
-}
-
-.scroll-right{
-    height: 100%;
-    border: solid;
-    text-align: right;
-    width: 5%;
-    position: absolute;
-    right: -5%;
-    top: 45%;
-    padding: 0px;
-    vertical-align: middle;
-    height: 151px;
-    background: orange;
-    cursor: pointer;
-    z-index: 1;
-    right: 3%;
-}
-
-.scroll-right:hover{
-  background: grey;
-}
-
-.scroll-left:hover{
-  background: pink;
+    /* border: solid white; */
 }
 
 .live-button-holder{
@@ -129,7 +90,6 @@ a:hover {
   text-align: center;
   margin-left: 20px;
   right: 0%;
-
 }
 
 .advert-live{
@@ -139,15 +99,8 @@ a:hover {
   width: 100%;
   background: white;
   text-align: center;
-
+  margin-left: 20px;
 }
-
-._42ef ._8u{
-  display: none !important;
-}
-
-.fb_iframe_widget{overflow: hidden;}
-.fb_ltr{margin-bottom: -20px;}
 
 .fb-commenting-live{
   z-index: 2;
@@ -184,6 +137,33 @@ a:hover {
 
 }
 
+._42ef ._8u{
+  display: none !important;
+}
+
+.fb_iframe_widget{overflow: hidden;}
+.fb_ltr{margin-bottom: -20px;}
+
+.fb-commenting-live{
+  z-index: 2;
+  position: absolute;
+  bottom: -60%;
+  width: 100%;
+  margin-left: 20px;
+  background: black;
+  text-align: center;
+}
+
+.fb-categories-home{
+  z-index: 2;
+  position: absolute;
+  bottom: -35%;
+  width: 98%;
+  margin-left: 20px;
+  height: 26%;
+  display: inline
+}
+
 .category-title{
   font-weight: 400;
   padding-left: 4%;
@@ -194,19 +174,15 @@ a:hover {
   padding-top: 2%;
   text-align: left;
   white-space: nowrap;
-  overflow: hidden;
-  width: 97%;
-  position: absolute;
-  left: 0%;
+
 }
 
 .table-row div{
- 
+  width: 24%;
   height: 160px;
-  max-height: 100%;
-  max-width: 100%;
+  display: inline-block;
   transition: transform .2s;
-  background-color: green;
+  background-color: white;
   overflow: hidden;
 
 }
