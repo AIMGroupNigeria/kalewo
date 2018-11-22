@@ -178,7 +178,7 @@ a:hover {
 }
 
 .table-row div{
-  width: 24%;
+  width: 240px;
   height: 160px;
   display: inline-block;
   transition: transform .2s;
