@@ -85,7 +85,12 @@
             <div class="col-sm fb-categories-home">
                  <div class="category-title-live" id="playlist-title"></div>
                
-                 <div class="table-row" id="playlist-item"></div>
+                 <div class="table-row" id="playlist-item">
+                    <span class="left-scroll" id='left-scroll'><img src="http://capsubservices.com/assets/images/icons/angle-left-512.png" style="width: 80%" /></span>
+                    
+                    <span class="right-scroll" id='right-scroll'><img src="https://png.pngtree.com/svg/20160510/angle_right_76231.png" style="width: 80%" /></span>
+                 </div>
+                 
                  
             </div>
 
@@ -163,9 +168,6 @@
                     $(id).slideToggle();
             }   
 
-            function goBackward(){
-
-            }
 
             $( document ).ready(()=>{
                 
@@ -174,16 +176,15 @@
 
               stream(liveEventID,'livePlayer');
 
-               var jqxhr = $.get( "http://api.dacast.com/v2/playlist/485985?apikey=114063_6eeb720e928988b24d3d&sort=ASC", function(data) {
-                         
-                        console.log(data);
+               var jqxhr = $.get( "http://api.dacast.com/v2/playlist/486406?apikey=114063_6eeb720e928988b24d3d&sort=ASC", function(data) {
+                      
                         $('#playlist-title').html(data.title);
 
                         for(let i = 0; i < data.content.list.length ; i++){
                           console.log('id--->');
                           console.log(data.content.list[i].id);
                         
-                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadVOD("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/sf-"+data.content.list[i].id+"-3.png?1542891095' style='width: 100%; height: 100%'  /></div>");
+                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadVOD("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/sf-"+data.content.list[i].id+"-3.png?1542891095'  /></div>");
 
                         }
 
@@ -199,7 +200,7 @@
             });
 
             function loadPlayer(channel_id){
-                console.log('here');
+               
                 //remove present player
                 //load new player
                 // play
@@ -274,6 +275,20 @@
                         console.log( "finished" );
                       });
             }
+
+            $('#right-scroll').click(function() {
+              event.preventDefault();
+              $('#playlist-item').animate({
+                scrollLeft: "+=200px"
+              }, "slow");
+            });
+
+             $('#left-scroll').click(function() {
+              event.preventDefault();
+              $('#playlist-item').animate({
+                scrollLeft: "-=200px"
+              }, "slow");
+            });
 
         </script>
     </body>
