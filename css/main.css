@@ -232,8 +232,8 @@ a:hover {
   color: #fff;
 }
 
-.scroll-base:hover{
-  background-color:rgba(255,255,255,1);
+.table-row span:hover{
+  background-color:#f9f9f93b;
 }
 
 .right-scroll{
