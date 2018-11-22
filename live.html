@@ -183,7 +183,7 @@
                           console.log('id--->');
                           console.log(data.content.list[i].id);
                         
-                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadPlayer("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tf-"+data.content.list[i].id+"-3.png?1542891095' style='width: 100%; height: 100%'  /></div>");
+                            $('#playlist-item').append("<div id='div"+i+"' onclick='loadVOD("+ data.content.list[i].id +")' style='background: black'><img src='https://images.dacast.com/114063/tf-"+data.content.list[i].id+"-3.png?1542891095' style='width: 100%; height: 100%'  /></div>");
 
                         }
 
@@ -198,7 +198,46 @@
                
             });
 
-             function loadPlayer(channel_id){
+            function loadPlayer(channel_id){
+                console.log('here');
+                //remove present player
+                //load new player
+                // play
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('#livePlayer').html('loading...');
+                var jqxhr = $.get( "http://api.dacast.com/v2/channel/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
+                     
+                        let theDiv = '#' + channel_id;
+                        
+                        // $(theDiv).removeAttr( 'width' );
+                        // $(theDiv).removeAttr( 'height' );
+
+                      $('#livePlayer').html(data.code);
+
+                        $(theDiv).attr("width", "100%"); 
+                        $(theDiv).attr("height", "100%"); 
+                        $(theDiv).attr("scrolling", "no"); 
+                        $(theDiv).attr("allowfullscreen"); 
+                        $(theDiv).attr("webkitallowfullscreen"); 
+                        $(theDiv).attr("mozallowfullscreen"); 
+                        $(theDiv).attr("oallowfullscreen"); 
+                        $(theDiv).attr("msallowfullscreen"); 
+
+                      // $("html, body").animate({ scrollTop: 0 }, "slow");
+                    })
+                      .done(function() {
+                        // alert( "second success" );
+                      })
+                      .fail(function(err) {
+                        console.log(err)
+                      })
+                      .always(function() {
+                        console.log( "finished" );
+                      });
+            }
+
+
+             function loadVOD(channel_id){
                 console.log('here');
                 //remove present player
                 //load new player
