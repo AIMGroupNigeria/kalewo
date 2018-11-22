@@ -59,7 +59,7 @@
             <!-- </div> -->
 
         <div id="livePlayer" class="mainPlayer-home">
-            <iframe src="//iframe.dacast.com/b/114063/c/478836" width="100%" height="100%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+           
         </div>
       
         <!--  <div class="share-icons col-sm">
@@ -293,6 +293,33 @@
               $('#playlist-item').animate({
                 scrollLeft: "-=200px"
               }, "slow");
+            });
+
+             $( document ).ready(()=>{
+               console.log('ready');
+               
+               $('#livePlayer').html('loading...');
+                  var jqxhr = $.get( "http://api.dacast.com/v2/channel/478836/embed/iframe?apikey=114063_6eeb720e928988b24d3d", function(data) {
+                        
+                      $('#livePlayer').html(data.code);
+
+                        $(theDiv).attr("width", "100%"); 
+                        $(theDiv).attr("height", "100%"); 
+                        $(theDiv).attr("scrolling", "no"); 
+                        $(theDiv).attr("allowfullscreen"); 
+                        $(theDiv).attr("webkitallowfullscreen"); 
+                        $(theDiv).attr("mozallowfullscreen"); 
+                        $(theDiv).attr("oallowfullscreen"); 
+                        $(theDiv).attr("msallowfullscreen"); 
+                      
+                      console.log(data.code);
+                    })
+                      .fail(function(err) {
+                        console.log(err)
+                      })
+                      
+                     
+
             });
 
         </script>
