@@ -133,7 +133,7 @@ a:hover {
 }
 
 .comment-icon-cover{
-  width: 100%;
+  width: 5%;
   position: absolute;
   bottom:-1%;
   text-align: right;
@@ -141,7 +141,7 @@ a:hover {
 }
 
 .comment-icon-cover img{
-  width: 5%;
+  width: 100%;
 
 }
 
@@ -194,9 +194,8 @@ a:hover {
   /* overflow: hidden; */
   padding: 2px;
   padding-top: 15px;
-
-
 }
+
 .table-row div:hover{
   transform: scale(1.5);
   cursor: pointer;
