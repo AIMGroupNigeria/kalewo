@@ -66,7 +66,7 @@ a:hover {
 .live-button-holder{
     z-index: 2;
     position: absolute;
-    bottom: 7%;
+    bottom: 9%;
     text-align: center;
     right: 0%;
     margin-left: 20px;
@@ -84,7 +84,7 @@ a:hover {
 .advert-home{
   z-index: 2;
   position: absolute;
-  bottom: -10%;
+  bottom: 0%;
   width: 100%;
   background: white;
   text-align: center;
