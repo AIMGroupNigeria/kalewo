@@ -136,19 +136,21 @@
                      
                         let theDiv = '#' + channel_id;
                         
-                        // $(theDiv).removeAttr( 'width' );
-                        // $(theDiv).removeAttr( 'height' );
+                          
+                      $('#promotionPlayer > iframe').removeAttr( 'width' );
+                      $('#promotionPlayer > iframe').removeAttr( 'height' );
 
                       $('#promotionPlayer').html(data.code);
 
-                        $(theDiv).attr("width", "100%"); 
-                        $(theDiv).attr("height", "100%"); 
-                        $(theDiv).attr("scrolling", "no"); 
-                        $(theDiv).attr("allowfullscreen"); 
-                        $(theDiv).attr("webkitallowfullscreen"); 
-                        $(theDiv).attr("mozallowfullscreen"); 
-                        $(theDiv).attr("oallowfullscreen"); 
-                        $(theDiv).attr("msallowfullscreen"); 
+                     
+                        $('#promotionPlayer > iframe').attr("width", "100%"); 
+                        $('#promotionPlayer > iframe').attr("height", "100%"); 
+                        $('#promotionPlayer > iframe').attr("scrolling", "no"); 
+                        $('#promotionPlayer > iframe').attr("allowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("webkitallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("mozallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("oallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("msallowfullscreen"); 
 
                       // $("html, body").animate({ scrollTop: 0 }, "slow");
                     })
@@ -171,14 +173,17 @@
                         
                       $('#promotionPlayer').html(data.code);
 
-                        $(theDiv).attr("width", "100%"); 
-                        $(theDiv).attr("height", "100%"); 
-                        $(theDiv).attr("scrolling", "no"); 
-                        $(theDiv).attr("allowfullscreen"); 
-                        $(theDiv).attr("webkitallowfullscreen"); 
-                        $(theDiv).attr("mozallowfullscreen"); 
-                        $(theDiv).attr("oallowfullscreen"); 
-                        $(theDiv).attr("msallowfullscreen"); 
+                      $('#promotionPlayer > iframe').removeAttr( 'width' );
+                      $('#promotionPlayer > iframe').removeAttr( 'height' );
+
+                        $('#promotionPlayer > iframe').attr("width", "100%"); 
+                        $('#promotionPlayer > iframe').attr("height", "100%"); 
+                        $('#promotionPlayer > iframe').attr("scrolling", "no"); 
+                        $('#promotionPlayer > iframe').attr("allowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("webkitallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("mozallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("oallowfullscreen"); 
+                        $('#promotionPlayer > iframe').attr("msallowfullscreen"); 
                       
                       console.log(data.code);
                     })

@@ -58,7 +58,7 @@
           
             <!-- </div> -->
 
-        <div id="livePlayer" class="mainPlayer-home">
+        <div id="livePlayer" class="mainPlayer-live">
            
         </div>
       
@@ -215,19 +215,21 @@
                      
                         let theDiv = '#' + channel_id;
                         
+                        $('#livePlayer > iframe').removeAttr( 'width' );
+                        $('#livePlayer > iframe').removeAttr( 'height' );
                         // $(theDiv).removeAttr( 'width' );
                         // $(theDiv).removeAttr( 'height' );
 
                       $('#livePlayer').html(data.code);
 
-                        $(theDiv).attr("width", "100%"); 
-                        $(theDiv).attr("height", "100%"); 
-                        $(theDiv).attr("scrolling", "no"); 
-                        $(theDiv).attr("allowfullscreen"); 
-                        $(theDiv).attr("webkitallowfullscreen"); 
-                        $(theDiv).attr("mozallowfullscreen"); 
-                        $(theDiv).attr("oallowfullscreen"); 
-                        $(theDiv).attr("msallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("width", "100%"); 
+                        $('#livePlayer > iframe').attr("height", "100%"); 
+                        $('#livePlayer > iframe').attr("scrolling", "no"); 
+                        $('#livePlayer > iframe').attr("allowfullscreen"); 
+                        $('#livePlayer > iframe').attr("webkitallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("mozallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("oallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("msallowfullscreen"); 
 
                       // $("html, body").animate({ scrollTop: 0 }, "slow");
                     })
@@ -253,20 +255,21 @@
                 var jqxhr = $.get( "http://api.dacast.com/v2/vod/" + channel_id + "/embed/iframe?apikey=114063_6eeb720e928988b24d3d&_format=JSON", function(data) {
                      
                         let theDiv = '#' + channel_id;
-                        
-                        // $(theDiv).removeAttr( 'width' );
-                        // $(theDiv).removeAttr( 'height' );
+                       
+                      $('#livePlayer > iframe').removeAttr( 'width' );
+                      $('#livePlayer > iframe').removeAttr( 'height' );
+                      
 
                       $('#livePlayer').html(data.code);
 
-                        $(theDiv).attr("width", "100%"); 
-                        $(theDiv).attr("height", "100%"); 
-                        $(theDiv).attr("scrolling", "no"); 
-                        $(theDiv).attr("allowfullscreen"); 
-                        $(theDiv).attr("webkitallowfullscreen"); 
-                        $(theDiv).attr("mozallowfullscreen"); 
-                        $(theDiv).attr("oallowfullscreen"); 
-                        $(theDiv).attr("msallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("width", "100%"); 
+                        $('#livePlayer > iframe').attr("height", "100%"); 
+                        $('#livePlayer > iframe').attr("scrolling", "no"); 
+                        $('#livePlayer > iframe').attr("allowfullscreen"); 
+                        $('#livePlayer > iframe').attr("webkitallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("mozallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("oallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("msallowfullscreen"); 
 
                       // $("html, body").animate({ scrollTop: 0 }, "slow");
                     })
@@ -301,16 +304,20 @@
                $('#livePlayer').html('loading...');
                   var jqxhr = $.get( "http://api.dacast.com/v2/channel/478836/embed/iframe?apikey=114063_6eeb720e928988b24d3d", function(data) {
                         
+                      $('#livePlayer > iframe').removeAttr( 'width' );
+                      $('#livePlayer > iframe').removeAttr( 'height' );
+                      
+
                       $('#livePlayer').html(data.code);
 
-                        $(theDiv).attr("width", "100%"); 
-                        $(theDiv).attr("height", "100%"); 
-                        $(theDiv).attr("scrolling", "no"); 
-                        $(theDiv).attr("allowfullscreen"); 
-                        $(theDiv).attr("webkitallowfullscreen"); 
-                        $(theDiv).attr("mozallowfullscreen"); 
-                        $(theDiv).attr("oallowfullscreen"); 
-                        $(theDiv).attr("msallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("width", "100%"); 
+                        $('#livePlayer > iframe').attr("height", "100%"); 
+                        $('#livePlayer > iframe').attr("scrolling", "no"); 
+                        $('#livePlayer > iframe').attr("allowfullscreen"); 
+                        $('#livePlayer > iframe').attr("webkitallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("mozallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("oallowfullscreen"); 
+                        $('#livePlayer > iframe').attr("msallowfullscreen"); 
                       
                       console.log(data.code);
                     })

@@ -34,17 +34,18 @@ a:hover {
 }
 
 .mainPlayer-live{
-
-    height: 80%;
+  
     border: solid black;
-   
-    width: 95%;
-    position: absolute;
-    bottom: 10%;
-    left: 4%;
-    right: 4%;
     margin: auto;
-    top: 20%;
+    position: absolute;
+    bottom: 19%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    width: 65%;
+    height: 57%;
+    /* border: solid; */
 
   }
 
@@ -58,9 +59,9 @@ a:hover {
     left: 10%;
     right: 10%;
     text-align: center;
-    width: 70%;
-    height: 70%;
-    /* border: solid white; */
+    width: 65%;
+    height: 62%;
+    /* border: solid; */
 }
 
 .live-button-holder{
@@ -95,7 +96,7 @@ a:hover {
 .advert-live{
     z-index: 2;
     position: absolute;
-       bottom: -3%;
+    bottom: -5%;
     width: 100%;
     background: black;
     text-align: left;
